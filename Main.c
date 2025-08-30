@@ -9,11 +9,18 @@
 
 int main() {
     printf("Welcome to Tic-Tac-Toe!\n");
-    printf("This is just a placeholder for now\n");
     
-    // TODO: add game logic here
-    // TODO: figure out how to make the board
-    // TODO: add player input
+    // trying to make a 3x3 board
+    char board[3][3];
+    
+    // initialize board with spaces
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            board[i][j] = ' ';
+        }
+    }
+    
+    displayBoard(board);
     
     return 0;
 }
@@ -27,7 +34,14 @@ int checkWin() {
 }
 
 // function to display board
-// not implemented yet
-void displayBoard() {
-    printf("Board display not ready yet\n");
+// this is my first attempt - might have bugs
+void displayBoard(char board[3][3]) {
+    printf("  0 1 2\n");
+    for(int i = 0; i < 3; i++) {
+        printf("%d ", i);
+        for(int j = 0; j < 3; j++) {
+            printf("%c ", board[i][j]);
+        }
+        printf("\n");
+    }
 }
